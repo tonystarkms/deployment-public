@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: cicd-app-demo
-          image: ghcr.io/tonystarkms/flask-webapp:latest
+          image: ghcr.io/tonystarkms/flask-webapp:95d761a00bd0582e88300c750aab651d3bac36ba
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
