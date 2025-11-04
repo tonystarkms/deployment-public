@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cicd-app-demo-ingress
+  namespace: share-app
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: cicddemoapp.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: cicd-app-demo-svc
+                port:
+                  number: 80
