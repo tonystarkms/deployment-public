@@ -3,8 +3,14 @@ kind: Ingress
 metadata:
   name: cicd-app-demo-ingress
   namespace: share-app
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts:
+        - cicddemoapp.example.com
+      secretName: example-tls   # reuse if cert includes cicddemoapp.example.com
   rules:
     - host: cicddemoapp.example.com
       http:
