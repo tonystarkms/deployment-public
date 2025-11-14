@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: cicd-app-demo
-          image: ghcr.io/tonystarkms/flask-webapp:1bd5837147e513faf352f2d8aa5cefb70c0d1650
+          image: ghcr.io/tonystarkms/flask-webapp:a8f5b7dc275783caa19b41af0ef4346114e2a83f
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
@@ -38,4 +38,5 @@ spec:
       targetPort: 5000
       protocol: TCP
   type: LoadBalancer
+
 
